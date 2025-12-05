@@ -2,8 +2,29 @@ namespace Program
 {
     class Rational
     {
-        private int top;
-        private int down;
+        public int top
+        {
+            get
+            {
+                return top;
+            }
+            private set
+            {
+                top = value;
+            }
+        }
+
+        public int down
+        {
+            get
+            {
+                return down;
+            }
+            private set
+            {
+                down = value;
+            }
+        }
         private const string NONE_EXIST = "Ошибка! 0 в знаменателе";
 
         public Rational(int top, int down)  
@@ -45,6 +66,11 @@ namespace Program
         public override string ToString()
         {
             return $"{top}/{down}";
+        }
+
+        public Rational Plus(Rational num)
+        {
+            return new Rational(top*num.down + down*num.top, down*num.down);
         }
     }
 }

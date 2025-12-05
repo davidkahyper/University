@@ -21,5 +21,14 @@ namespace Program
             //     Console.WriteLine(e.Message);
             // }
         }
+
+        public static void TestPlusRational()
+        {
+            Rational t1 = new Rational(2, 3);
+            Rational t2 = new Rational(10, 5);
+
+            var t3 = t1.Plus(t2);
+            Console.WriteLine(t3.ToString());
+        }
     }
 }
