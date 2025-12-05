@@ -27,7 +27,27 @@ namespace Program
             Rational t1 = new Rational(2, 3);
             Rational t2 = new Rational(10, 5);
 
-            var t3 = t1.Plus(t2);
+            // var t3 = t1.Plus(t2);
+            var t3 = t1 + t2;
+            Console.WriteLine(t3.ToString());
+        }
+        
+        public static void TestOperationsRational()
+        {
+            Rational t1 = new Rational(2, 3);
+            Rational t2 = new Rational(10, 5);
+
+            // var t3 = t1.Plus(t2);
+            var t3 = t1 + t2;
+            Console.WriteLine(t3.ToString());
+            
+            t3 = t1 - t2;
+            Console.WriteLine(t3.ToString());
+            
+            t3 = t1 * t2;
+            Console.WriteLine(t3.ToString());
+            
+            t3 = t1 / t2;
             Console.WriteLine(t3.ToString());
         }
     }

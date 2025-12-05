@@ -1,35 +1,16 @@
+using System.Security.Cryptography;
+
 namespace Program
 {
     class Rational
     {
-        public int top
-        {
-            get
-            {
-                return top;
-            }
-            private set
-            {
-                top = value;
-            }
-        }
-
-        public int down
-        {
-            get
-            {
-                return down;
-            }
-            private set
-            {
-                down = value;
-            }
-        }
+        public int top { get; private set; }
+        public int down { get; private set; }
         private const string NONE_EXIST = "Ошибка! 0 в знаменателе";
 
         public Rational(int top, int down)  
         {
-            // if (down == 0) throw new RationalException(NONE_EXIST);
+            if (down == 0) throw new RationalException(NONE_EXIST);
 
             if (down < 0)
             {
@@ -52,6 +33,9 @@ namespace Program
 
         public static int FindNod(int t, int d)
         {
+            t = Math.Abs(t);
+            d = Math.Abs(d);
+            
             int temp = 0;
             do
             {
@@ -71,6 +55,41 @@ namespace Program
         public Rational Plus(Rational num)
         {
             return new Rational(top*num.down + down*num.top, down*num.down);
+        }
+
+        public static Rational operator+(Rational r1, Rational r2)
+        {
+            return r1.Plus(r2);
+        }
+        
+        public Rational Minus(Rational num)
+        {
+            return new Rational(top*num.down - down*num.top, down*num.down);
+        }
+        
+        public static Rational operator-(Rational r1, Rational r2)
+        {
+            return r1.Minus(r2);
+        }
+        
+        public Rational Mult(Rational num)
+        {
+            return new Rational(top*num.top, down*num.down);
+        }
+        
+        public static Rational operator*(Rational r1, Rational r2)
+        {
+            return r1.Mult(r2);
+        }
+        
+        public Rational Divide(Rational num)
+        {
+            return new Rational(top*num.down, down*num.top);
+        }
+        
+        public static Rational operator/(Rational r1, Rational r2)
+        {
+            return r1.Divide(r2);
         }
     }
 }
