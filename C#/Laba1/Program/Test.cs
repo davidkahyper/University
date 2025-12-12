@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace Program
 {
     class Test
@@ -49,6 +51,32 @@ namespace Program
             
             t3 = t1 / t2;
             Console.WriteLine(t3.ToString());
+        }
+
+        public static void TestOperationsComplex()
+        {
+            // Complex firstNum = new Complex(-1, 3);
+            // Complex secondNum = new Complex(6, -9);
+            Complex firstNum = new Complex(3, 2);
+            Complex secondNum = new Complex(1, 4);
+
+            Console.WriteLine(firstNum.ToString());
+            Console.WriteLine(secondNum.ToString());
+            Console.WriteLine("\n\n\n");
+
+            Complex test = Complex.MultComplexNumbers(firstNum, secondNum);
+            Console.WriteLine(test);
+            Console.WriteLine("\n\n\n");
+            
+            test = firstNum * secondNum;
+            Console.WriteLine(firstNum);
+        }
+
+        public static void TestOperationsMnogochlen()
+        {
+            Mnogochlen firstNum = new Mnogochlen(2, -31, 4);
+            Console.WriteLine(firstNum.ToString());
+            firstNum.PrintKolvoCorney();
         }
     }
 }

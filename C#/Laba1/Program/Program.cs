@@ -6,7 +6,9 @@ namespace Program
     {
         public static void Main()
         {
-            Test.TestOperationsRational();
+            // Test.TestOperationsRational();
+            // Test.TestOperationsComplex();
+            Test.TestOperationsMnogochlen();
         }
     }
 }
