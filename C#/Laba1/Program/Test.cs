@@ -1,5 +1,3 @@
-using System.Diagnostics;
-
 namespace Program
 {
     class Test
@@ -74,9 +72,26 @@ namespace Program
 
         public static void TestOperationsMnogochlen()
         {
-            Mnogochlen firstNum = new Mnogochlen(2, -31, 4);
+            // Mnogochlen firstNum = new Mnogochlen(-4, 5, 78);
+            // Mnogochlen firstNum = new Mnogochlen(-1, -1, -2);
+            Mnogochlen firstNum = new Mnogochlen(1, 0, -10);
             Console.WriteLine(firstNum.ToString());
-            firstNum.PrintKolvoCorney();
-        }
+
+            if (firstNum.GetCountCorney() == DiscriminantEnum.TwoCoreney)
+            {
+                Console.WriteLine($"{firstNum.X1}  {firstNum.X2}\n\n\n");
+            }
+            else if (firstNum.GetCountCorney() == DiscriminantEnum.OneCoreney)
+            {
+                Console.WriteLine($"{firstNum.X1}\n\n\n");
+                Console.WriteLine($"{firstNum.X2}\n\n\n");
+            }
+            else Console.WriteLine("Корней 0! \n\n\n");
+
+            {
+                
+            }
+
+    }
     }
 }
