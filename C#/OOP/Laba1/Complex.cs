@@ -1,5 +1,5 @@
 
-namespace Program;
+namespace Laba1;
 
 class Complex
 {
@@ -16,7 +16,7 @@ class Complex
             Console.WriteLine("Ошибка! Комплексная часть не может быть равна 0!");
             this.b = 1;
         }
-        this.b = b;
+        else this.b = b;
     }
     
     public Complex()

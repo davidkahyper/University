@@ -1,4 +1,4 @@
-namespace Program;
+namespace Laba1;
 
 public class RationalException : Exception
 {

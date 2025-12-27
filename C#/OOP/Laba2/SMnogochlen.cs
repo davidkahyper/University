@@ -1,4 +1,4 @@
-namespace Laba1
+namespace Laba2
 {
     public enum DiscriminantEnum
     {
@@ -8,7 +8,7 @@ namespace Laba1
     }
 
     
-    class Mnogochlen
+    struct SMnogochlen
     {
         
         
@@ -52,7 +52,7 @@ namespace Laba1
         
         private DiscriminantEnum discriminantState;
         
-        public Mnogochlen(int a, int b, int c)
+        public SMnogochlen(int a, int b, int c)
         {
             if (a == 0) throw new ArgumentException();
             

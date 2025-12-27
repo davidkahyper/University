@@ -1,14 +1,14 @@
 ﻿using System.Net.Http.Headers;
 
-namespace Program
+namespace Laba1
 {
     class Program
     {
         public static void Main()
         {
             // Test.TestOperationsRational();
-            // Test.TestOperationsComplex();
-            Test.TestOperationsMnogochlen();
+            Test.TestOperationsComplex();
+            // Test.TestOperationsMnogochlen();
         }
     }
 }

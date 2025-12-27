@@ -1,16 +1,14 @@
-using System.Security.Cryptography;
-
-namespace Laba1
+namespace Laba2
 {
-    class Rational
+    struct SRational
     {
         public int top { get; private set; }
         public int down { get; private set; }
         private const string NONE_EXIST = "Ошибка! 0 в знаменателе";
 
-        public Rational(int top, int down)  
+        public SRational(int top, int down)  
         {
-            if (down == 0) throw new RationalException(NONE_EXIST);
+            // if (down == 0) throw new RationalException(NONE_EXIST);
 
             if (down < 0)
             {
@@ -25,7 +23,7 @@ namespace Laba1
             // System.Console.WriteLine($"После сокращения: t: {this.top}, d: {this.down}\n\n");
         }
 
-        public Rational()
+        public SRational()
         {
             top = 0;
             down = 1;
@@ -52,42 +50,42 @@ namespace Laba1
             return $"{top}/{down}";
         }
 
-        public Rational Plus(Rational num)
+        public SRational Plus(SRational num)
         {
-            return new Rational(top*num.down + down*num.top, down*num.down);
+            return new SRational(top*num.down + down*num.top, down*num.down);
         }
 
-        public static Rational operator+(Rational r1, Rational r2)
+        public static SRational operator+(SRational r1, SRational r2)
         {
             return r1.Plus(r2);
         }
         
-        public Rational Minus(Rational num)
+        public SRational Minus(SRational num)
         {
-            return new Rational(top*num.down - down*num.top, down*num.down);
+            return new SRational(top*num.down - down*num.top, down*num.down);
         }
         
-        public static Rational operator-(Rational r1, Rational r2)
+        public static SRational operator-(SRational r1, SRational r2)
         {
             return r1.Minus(r2);
         }
         
-        public Rational Mult(Rational num)
+        public SRational Mult(SRational num)
         {
-            return new Rational(top*num.top, down*num.down);
+            return new SRational(top*num.top, down*num.down);
         }
         
-        public static Rational operator*(Rational r1, Rational r2)
+        public static SRational operator*(SRational r1, SRational r2)
         {
             return r1.Mult(r2);
         }
         
-        public Rational Divide(Rational num)
+        public SRational Divide(SRational num)
         {
-            return new Rational(top*num.down, down*num.top);
+            return new SRational(top*num.down, down*num.top);
         }
         
-        public static Rational operator/(Rational r1, Rational r2)
+        public static SRational operator/(SRational r1, SRational r2)
         {
             return r1.Divide(r2);
         }
