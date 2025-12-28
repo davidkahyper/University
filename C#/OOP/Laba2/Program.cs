@@ -6,8 +6,8 @@ namespace Laba2
         public static void Main()
         {
             // STest.TestOperationsSRational();
-            STest.TestOperationsSComplex(); 
-            // STest.TestOperationsSMnogochlen();
+            // STest.TestOperationsSComplex(); 
+            STest.TestOperationsSMnogochlen();
         }
     }
 }

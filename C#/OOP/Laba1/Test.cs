@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace Laba1
 {
     class Test
@@ -36,7 +38,9 @@ namespace Laba1
         {
             Rational t1 = new Rational(2, 3);
             Rational t2 = new Rational(10, 5);
-
+            Console.WriteLine(t1.ToString());
+            Console.WriteLine(t2.ToString());
+            Console.WriteLine();
             // var t3 = t1.Plus(t2);
             var t3 = t1 + t2;
             Console.WriteLine(t3.ToString());

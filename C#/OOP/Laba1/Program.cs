@@ -7,8 +7,8 @@ namespace Laba1
         public static void Main()
         {
             // Test.TestOperationsRational();
-            Test.TestOperationsComplex();
-            // Test.TestOperationsMnogochlen();
+            // Test.TestOperationsComplex();
+            Test.TestOperationsMnogochlen();
         }
     }
 }
